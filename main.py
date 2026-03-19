@@ -1,6 +1,3 @@
-import truststore
-truststore.inject_into_ssl()  # use Windows cert store — fixes enterprise SSL inspection
-
 from fastapi import FastAPI, Form, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn

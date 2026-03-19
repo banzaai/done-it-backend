@@ -1,7 +1,4 @@
-import truststore
-truststore.inject_into_ssl()  # use Windows cert store - fixes enterprise SSL inspection
-
-import os
+﻿import os
 import json
 import dotenv
 
@@ -153,10 +150,10 @@ class Startup:
                 "report": "Done-it genereert gedetailleerde rapporten over gewerkte uren, locaties en projecten. U kunt deze exporteren naar Excel of direct koppelen aan uw boekhoudsoftware.",
                 "integration": "Done-it integreert naadloos met tools zoals Exact Online, TeamLeader en Yuki. Via onze API zijn ook maatwerk-integraties mogelijk met uw bestaand ERP-systeem.",
                 "contact": "U kunt Done-it bereiken via info@done-it.be of via ons contactformulier op done-it.be/contact. Onze medewerkers helpen u graag verder!",
-                "demo": "Vraag een gratis demo aan via done-it.be/aan-de-slag. Onze specialisten laten u live zien hoe Done-it uw administratie vereenvoudigt en uw team efficiënter maakt.",
+                "demo": "Vraag een gratis demo aan via done-it.be/aan-de-slag. Onze specialisten laten u live zien hoe Done-it uw administratie vereenvoudigt en uw team effici├½nter maakt.",
                 "fleet": "Done-it beheert uw volledig wagenpark: GPS-tracking van alle voertuigen, onderhoudsbeheer en brandstofverbruik. U heeft altijd controle over uw vloot.",
                 "privacy": "Done-it neemt privacy serieus en voldoet volledig aan de GDPR-wetgeving. Alle gegevens worden veilig opgeslagen op Europese servers en medewerkers worden ingelicht over wat er geregistreerd wordt.",
-                "generic": "Done-it is een Belgische app voor GPS-tijdregistratie, rittenregistratie en projectbeheer. Stel mij gerust een specifieke vraag over onze functies, prijzen of integraties — ik help u graag verder!"
+                "generic": "Done-it is een Belgische app voor GPS-tijdregistratie, rittenregistratie en projectbeheer. Stel mij gerust een specifieke vraag over onze functies, prijzen of integraties ΓÇö ik help u graag verder!"
             },
             "fr": {
                 "greet": "Bonjour\u00a0! Je suis l'assistant virtuel de Done-it. Je vous aide volontiers avec vos questions sur notre application de pointage GPS et de gestion de projets. Comment puis-je vous aider\u00a0?",

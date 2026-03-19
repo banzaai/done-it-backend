@@ -1,0 +1,17 @@
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# LangChain + HuggingFace (API only -- no local model download)
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-huggingface>=0.0.3
+huggingface-hub>=0.23.0
+
+# Numerical (for in-memory cosine similarity vector store)
+numpy>=1.26.0
+
+truststore>=0.9.1  # use Windows cert store for enterprise SSL compatibility

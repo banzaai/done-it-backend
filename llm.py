@@ -101,17 +101,19 @@ class Startup:
     def chat(self, messages: List[Dict]) -> str:
         """Call HF API if reachable, otherwise fall back to keyword-based response."""
         try:
+            print(f"[chat] Calling HF API: {CHAT_API}")
             resp = requests.post(
                 CHAT_API,
                 headers={"Authorization": f"Bearer {self.token}", "Content-Type": "application/json"},
                 json={"model": CHAT_MODEL, "messages": messages, "max_tokens": 512},
-                timeout=10,
+                timeout=60,
             )
+            print(f"[chat] HF API response: {resp.status_code}")
             # Detect proxy block pages (ZScaler, etc.) returned as 200 HTML
             if resp.ok and resp.text.lstrip().startswith("<"):
                 raise RuntimeError("API returned HTML (proxy block)")
             if not resp.ok:
-                raise RuntimeError(f"HTTP {resp.status_code}")
+                raise RuntimeError(f"HTTP {resp.status_code}: {resp.text[:200]}")
             data = resp.json()
             if "error" in data:
                 raise RuntimeError(f"Model error: {data['error']}")
